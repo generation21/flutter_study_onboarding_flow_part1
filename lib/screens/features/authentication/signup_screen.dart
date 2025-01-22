@@ -7,6 +7,7 @@ import 'package:tiktok_onboarding_flow/screens/features/authentication/login_scr
 import 'package:tiktok_onboarding_flow/screens/features/authentication/signup_form_screen.dart';
 import 'package:tiktok_onboarding_flow/screens/features/authentication/widgets/form_button.dart';
 import 'package:tiktok_onboarding_flow/screens/features/authentication/widgets/social_auth_button.dart';
+import 'package:tiktok_onboarding_flow/screens/features/authentication/widgets/terms_of_use.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
@@ -90,6 +91,7 @@ class SignUpScreen extends StatelessWidget {
             FormButton(
               text: "Create account",
               onPressed: () => _onCreateAccountPressed(context),
+              isActive: true,
             )
           ],
         ),
@@ -103,43 +105,7 @@ class SignUpScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              RichText(
-                text: TextSpan(
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: Sizes.size16,
-                  ),
-                  children: [
-                    const TextSpan(
-                      text: "By signing up, you agree to our ",
-                    ),
-                    TextSpan(
-                      text: "Terms",
-                      style: TextStyle(
-                        color: Theme.of(context).primaryColor,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                    const TextSpan(text: ", "),
-                    TextSpan(
-                      text: "Privacy Policy",
-                      style: TextStyle(
-                        color: Theme.of(context).primaryColor,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                    const TextSpan(text: ", and "),
-                    TextSpan(
-                      text: "Cookie Use",
-                      style: TextStyle(
-                        color: Theme.of(context).primaryColor,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                    const TextSpan(text: "."),
-                  ],
-                ),
-              ),
+              TermsOfUse(learnMore: false, others: false),
               Gaps.v16,
               RichText(
                 text: TextSpan(
