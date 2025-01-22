@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Onboarding Flow part',
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
-        primaryColor: const Color(0xFFE0435A),
+        primaryColor: const Color(0xFF4D98E9),
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.white,
           elevation: 0,
